@@ -1,0 +1,2 @@
+ACTION=="add", KERNEL=="<device name (e.g. sdb)>", ATTRS{idVendor}=="<device's vendorid>", ATTRS{idProduct}=="<device's productid>", ENV{XAUTHORITY}="/home/<user>/.Xauthority", ENV{DISPLAY}=":0", OWNER="<user>", RUN+="/usr/local/bin/usb-amazingstick-in_udev"
+ACTION=="remove", KERNEL=="<device name (e.g. sdb)>", ATTRS{idVendor}=="<device's vendorid>", ATTRS{idProduct}=="<device's productid>", ENV{XAUTHORITY}="/home/<user>/.Xauthority", ENV{DISPLAY}=":0", OWNER="<user>", RUN+="/usr/local/bin/usb-amazingstick-out_udev"

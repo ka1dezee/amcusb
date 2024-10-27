@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+
+export DISPLAY=:0
+command="/sbin/bash"
+command_args="/usr/local/bin/usb-decrypt.sh"
+command_user="<user>:<user>"
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+	need localmount
+}
+
